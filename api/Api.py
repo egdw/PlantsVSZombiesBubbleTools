@@ -1,9 +1,9 @@
 import time
 
 import requests
-import json
 
 
+# 发送多条弹幕
 def send_multi_bubble(msgs):
     if msgs is not None and len(msgs) > 0:
         send_msg = []
@@ -15,16 +15,17 @@ def send_multi_bubble(msgs):
                     sends = sends + send + " "
                 print(sends)
                 send_bubble(sends)
-                time.sleep(1)
+                time.sleep(1)  # 延时发送
                 send_msg.clear()
         sends = ""
         for send in send_msg:
             sends = sends + send + " "
-        print(sends)
         send_bubble(sends)
         time.sleep(1)
         send_msg.clear()
 
+
+# 发送单条弹幕
 def send_bubble(msg):
     url = 'https://api.live.bilibili.com/msg/send'  # 这个是B站的弹幕，发送API接口
 

@@ -1,7 +1,4 @@
-import typing
-
-from PyQt5.QtWidgets import QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
-from PyQt5.uic.properties import QtGui
+from PyQt5.QtWidgets import QMainWindow
 
 from windows.OpertionGridWidget import OperateGridWidget
 
